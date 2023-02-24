@@ -1,0 +1,948 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7601171E29A97449003C7EAB /* SSOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116A129A97448003C7EAB /* SSOView.swift */; };
+		7601171F29A97449003C7EAB /* LoginScreenDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760116A229A97448003C7EAB /* LoginScreenDemo.xcdatamodeld */; };
+		7601172029A97449003C7EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 760116A429A97448003C7EAB /* Assets.xcassets */; };
+		7601172129A97449003C7EAB /* EnchantedLinkUpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116A629A97448003C7EAB /* EnchantedLinkUpdateEmail.swift */; };
+		7601172229A97449003C7EAB /* EnchantedLinkSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116A729A97448003C7EAB /* EnchantedLinkSignUpView.swift */; };
+		7601172329A97449003C7EAB /* EnchantedLinkDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116A829A97448003C7EAB /* EnchantedLinkDisplayView.swift */; };
+		7601172429A97449003C7EAB /* EnchantedLinkLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116A929A97448003C7EAB /* EnchantedLinkLoggedIn.swift */; };
+		7601172529A97449003C7EAB /* EnchantedLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116AA29A97448003C7EAB /* EnchantedLinkView.swift */; };
+		7601172629A97449003C7EAB /* EnchantedLinkSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116AB29A97448003C7EAB /* EnchantedLinkSignIn.swift */; };
+		7601172729A97449003C7EAB /* EnchantedLinkSignUpOrIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116AC29A97448003C7EAB /* EnchantedLinkSignUpOrIn.swift */; };
+		7601172829A97449003C7EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116AD29A97448003C7EAB /* AppDelegate.swift */; };
+		7601172929A97449003C7EAB /* TOTPSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116AF29A97448003C7EAB /* TOTPSignInView.swift */; };
+		7601172A29A97449003C7EAB /* TOTPSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116B029A97448003C7EAB /* TOTPSignUpView.swift */; };
+		7601172B29A97449003C7EAB /* TOTPVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116B129A97448003C7EAB /* TOTPVerifyView.swift */; };
+		7601172C29A97449003C7EAB /* TOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116B229A97448003C7EAB /* TOTPView.swift */; };
+		7601172D29A97449003C7EAB /* TOTPDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116B329A97448003C7EAB /* TOTPDisplayView.swift */; };
+		7601172E29A97449003C7EAB /* TOTPLoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116B429A97448003C7EAB /* TOTPLoggedInView.swift */; };
+		7601172F29A97449003C7EAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116B529A97448003C7EAB /* ContentView.swift */; };
+		7601173029A97449003C7EAB /* DescopeWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116B629A97448003C7EAB /* DescopeWrappers.swift */; };
+		7601173129A97449003C7EAB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 760116B729A97448003C7EAB /* README.md */; };
+		7601173229A97449003C7EAB /* .env in Resources */ = {isa = PBXBuildFile; fileRef = 760116B829A97448003C7EAB /* .env */; };
+		7601173329A97449003C7EAB /* OAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116BA29A97448003C7EAB /* OAuthView.swift */; };
+		7601173429A97449003C7EAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 760116BC29A97448003C7EAB /* Preview Assets.xcassets */; };
+		7601173529A97449003C7EAB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 760116C129A97448003C7EAB /* README.md */; };
+		7601173629A97449003C7EAB /* .!54591!.DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 760116C329A97448003C7EAB /* .!54591!.DS_Store */; };
+		7601173729A97449003C7EAB /* .!54390!.DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 760116C429A97448003C7EAB /* .!54390!.DS_Store */; };
+		7601173829A97449003C7EAB /* SignUpMagicLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116C629A97448003C7EAB /* SignUpMagicLink.swift */; };
+		7601173929A97449003C7EAB /* MagicLinkLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116C729A97448003C7EAB /* MagicLinkLoggedIn.swift */; };
+		7601173A29A97449003C7EAB /* MagicLinkUpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116C829A97448003C7EAB /* MagicLinkUpdateEmail.swift */; };
+		7601173B29A97449003C7EAB /* MagicLinkUpdatePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116C929A97448003C7EAB /* MagicLinkUpdatePhone.swift */; };
+		7601173C29A97449003C7EAB /* VerifyMagicLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116CA29A97448003C7EAB /* VerifyMagicLinkView.swift */; };
+		7601173D29A97449003C7EAB /* SignInMagicLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116CB29A97448003C7EAB /* SignInMagicLink.swift */; };
+		7601173E29A97449003C7EAB /* MagicLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116CC29A97448003C7EAB /* MagicLinkView.swift */; };
+		7601173F29A97449003C7EAB /* SignUpOrInMagicLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116CD29A97448003C7EAB /* SignUpOrInMagicLink.swift */; };
+		7601174029A97449003C7EAB /* OAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116CF29A97448003C7EAB /* OAuthView.swift */; };
+		7601174129A97449003C7EAB /* .!54476!.DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 760116D029A97448003C7EAB /* .!54476!.DS_Store */; };
+		7601174229A97449003C7EAB /* LoginScreenDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760116D129A97448003C7EAB /* LoginScreenDemo.xcdatamodeld */; };
+		7601174329A97449003C7EAB /* .!54508!.DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 760116D329A97448003C7EAB /* .!54508!.DS_Store */; };
+		7601174429A97449003C7EAB /* EnchantedLinkUpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116D529A97448003C7EAB /* EnchantedLinkUpdateEmail.swift */; };
+		7601174529A97449003C7EAB /* EnchantedLinkSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116D629A97448003C7EAB /* EnchantedLinkSignUpView.swift */; };
+		7601174629A97449003C7EAB /* EnchantedLinkDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116D729A97448003C7EAB /* EnchantedLinkDisplayView.swift */; };
+		7601174729A97449003C7EAB /* EnchantedLinkLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116D829A97448003C7EAB /* EnchantedLinkLoggedIn.swift */; };
+		7601174829A97449003C7EAB /* EnchantedLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116D929A97448003C7EAB /* EnchantedLinkView.swift */; };
+		7601174929A97449003C7EAB /* EnchantedLinkSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116DA29A97448003C7EAB /* EnchantedLinkSignIn.swift */; };
+		7601174A29A97449003C7EAB /* EnchantedLinkSignUpOrIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116DB29A97448003C7EAB /* EnchantedLinkSignUpOrIn.swift */; };
+		7601174B29A97449003C7EAB /* SignUpOrInOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116DD29A97448003C7EAB /* SignUpOrInOTP.swift */; };
+		7601174C29A97449003C7EAB /* VerifyOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116DE29A97448003C7EAB /* VerifyOTPView.swift */; };
+		7601174D29A97449003C7EAB /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116DF29A97448003C7EAB /* OTPView.swift */; };
+		7601174E29A97449003C7EAB /* SignInOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116E029A97448003C7EAB /* SignInOTP.swift */; };
+		7601174F29A97449003C7EAB /* OTPLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116E129A97448003C7EAB /* OTPLoggedIn.swift */; };
+		7601175029A97449003C7EAB /* OTPUpdatePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116E229A97448003C7EAB /* OTPUpdatePhone.swift */; };
+		7601175129A97449003C7EAB /* OTPUpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116E329A97448003C7EAB /* OTPUpdateEmail.swift */; };
+		7601175229A97449003C7EAB /* SignUpOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116E429A97448003C7EAB /* SignUpOTP.swift */; };
+		7601175329A97449003C7EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 760116E529A97448003C7EAB /* Assets.xcassets */; };
+		7601175429A97449003C7EAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 760116E729A97448003C7EAB /* Preview Assets.xcassets */; };
+		7601175529A97449003C7EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 760116E829A97448003C7EAB /* LaunchScreen.storyboard */; };
+		7601175629A97449003C7EAB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 760116EA29A97448003C7EAB /* README.md */; };
+		7601175729A97449003C7EAB /* SSOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116EC29A97448003C7EAB /* SSOView.swift */; };
+		7601175829A97449003C7EAB /* .!54704!.DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 760116ED29A97448003C7EAB /* .!54704!.DS_Store */; };
+		7601175929A97449003C7EAB /* .env in Resources */ = {isa = PBXBuildFile; fileRef = 760116EE29A97448003C7EAB /* .env */; };
+		7601175A29A97449003C7EAB /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116EF29A97448003C7EAB /* SwiftUIView.swift */; };
+		7601175B29A97449003C7EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116F029A97448003C7EAB /* AppDelegate.swift */; };
+		7601175C29A97449003C7EAB /* DescopeWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116F129A97448003C7EAB /* DescopeWrappers.swift */; };
+		7601175D29A97449003C7EAB /* TOTPSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116F329A97448003C7EAB /* TOTPSignInView.swift */; };
+		7601175E29A97449003C7EAB /* TOTPSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116F429A97448003C7EAB /* TOTPSignUpView.swift */; };
+		7601175F29A97449003C7EAB /* TOTPVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116F529A97448003C7EAB /* TOTPVerifyView.swift */; };
+		7601176029A97449003C7EAB /* TOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116F629A97448003C7EAB /* TOTPView.swift */; };
+		7601176129A97449003C7EAB /* TOTPDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116F729A97448003C7EAB /* TOTPDisplayView.swift */; };
+		7601176229A97449003C7EAB /* TOTPLoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116F829A97448003C7EAB /* TOTPLoggedInView.swift */; };
+		7601176329A97449003C7EAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116F929A97448003C7EAB /* ContentView.swift */; };
+		7601176429A97449003C7EAB /* .!54618!.DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 760116FA29A97448003C7EAB /* .!54618!.DS_Store */; };
+		7601176629A97449003C7EAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116FC29A97448003C7EAB /* SceneDelegate.swift */; };
+		7601176729A97449003C7EAB /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760116FD29A97448003C7EAB /* LoggedInView.swift */; };
+		7601176829A97449003C7EAB /* .!54565!.DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 760116FE29A97448003C7EAB /* .!54565!.DS_Store */; };
+		7601176929A97449003C7EAB /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601170829A97448003C7EAB /* LoggedInView.swift */; };
+		7601176A29A97449003C7EAB /* SignUpMagicLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601170A29A97449003C7EAB /* SignUpMagicLink.swift */; };
+		7601176B29A97449003C7EAB /* MagicLinkLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601170B29A97449003C7EAB /* MagicLinkLoggedIn.swift */; };
+		7601176C29A97449003C7EAB /* MagicLinkUpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601170C29A97449003C7EAB /* MagicLinkUpdateEmail.swift */; };
+		7601176D29A97449003C7EAB /* MagicLinkUpdatePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601170D29A97449003C7EAB /* MagicLinkUpdatePhone.swift */; };
+		7601176E29A97449003C7EAB /* VerifyMagicLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601170E29A97449003C7EAB /* VerifyMagicLinkView.swift */; };
+		7601176F29A97449003C7EAB /* SignInMagicLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601170F29A97449003C7EAB /* SignInMagicLink.swift */; };
+		7601177029A97449003C7EAB /* MagicLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171029A97449003C7EAB /* MagicLinkView.swift */; };
+		7601177129A97449003C7EAB /* SignUpOrInMagicLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171129A97449003C7EAB /* SignUpOrInMagicLink.swift */; };
+		7601177329A97449003C7EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7601171329A97449003C7EAB /* LaunchScreen.storyboard */; };
+		7601177429A97449003C7EAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171429A97449003C7EAB /* SceneDelegate.swift */; };
+		7601177529A97449003C7EAB /* SignUpOrInOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171629A97449003C7EAB /* SignUpOrInOTP.swift */; };
+		7601177629A97449003C7EAB /* VerifyOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171729A97449003C7EAB /* VerifyOTPView.swift */; };
+		7601177729A97449003C7EAB /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171829A97449003C7EAB /* OTPView.swift */; };
+		7601177829A97449003C7EAB /* SignInOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171929A97449003C7EAB /* SignInOTP.swift */; };
+		7601177929A97449003C7EAB /* OTPLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171A29A97449003C7EAB /* OTPLoggedIn.swift */; };
+		7601177A29A97449003C7EAB /* OTPUpdatePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171B29A97449003C7EAB /* OTPUpdatePhone.swift */; };
+		7601177B29A97449003C7EAB /* OTPUpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171C29A97449003C7EAB /* OTPUpdateEmail.swift */; };
+		7601177C29A97449003C7EAB /* SignUpOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601171D29A97449003C7EAB /* SignUpOTP.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7601170229A97448003C7EAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 760116BE29A97448003C7EAB /* LoginScreenDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C001309A23D53FDF00CA3447;
+			remoteInfo = LoginScreenDemo;
+		};
+		7601170429A97448003C7EAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 760116BE29A97448003C7EAB /* LoginScreenDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C00130B323D53FE900CA3447;
+			remoteInfo = LoginScreenDemoTests;
+		};
+		7601170629A97448003C7EAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 760116BE29A97448003C7EAB /* LoginScreenDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C00130BE23D53FE900CA3447;
+			remoteInfo = LoginScreenDemoUITests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7601168E29A973F3003C7EAB /* Descope-Swift-Sample-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Descope-Swift-Sample-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		760116A129A97448003C7EAB /* SSOView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSOView.swift; sourceTree = "<group>"; };
+		760116A329A97448003C7EAB /* LoginScreenDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoginScreenDemo.xcdatamodel; sourceTree = "<group>"; };
+		760116A429A97448003C7EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		760116A629A97448003C7EAB /* EnchantedLinkUpdateEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkUpdateEmail.swift; sourceTree = "<group>"; };
+		760116A729A97448003C7EAB /* EnchantedLinkSignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkSignUpView.swift; sourceTree = "<group>"; };
+		760116A829A97448003C7EAB /* EnchantedLinkDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkDisplayView.swift; sourceTree = "<group>"; };
+		760116A929A97448003C7EAB /* EnchantedLinkLoggedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkLoggedIn.swift; sourceTree = "<group>"; };
+		760116AA29A97448003C7EAB /* EnchantedLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkView.swift; sourceTree = "<group>"; };
+		760116AB29A97448003C7EAB /* EnchantedLinkSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkSignIn.swift; sourceTree = "<group>"; };
+		760116AC29A97448003C7EAB /* EnchantedLinkSignUpOrIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkSignUpOrIn.swift; sourceTree = "<group>"; };
+		760116AD29A97448003C7EAB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		760116AF29A97448003C7EAB /* TOTPSignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPSignInView.swift; sourceTree = "<group>"; };
+		760116B029A97448003C7EAB /* TOTPSignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPSignUpView.swift; sourceTree = "<group>"; };
+		760116B129A97448003C7EAB /* TOTPVerifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPVerifyView.swift; sourceTree = "<group>"; };
+		760116B229A97448003C7EAB /* TOTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPView.swift; sourceTree = "<group>"; };
+		760116B329A97448003C7EAB /* TOTPDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPDisplayView.swift; sourceTree = "<group>"; };
+		760116B429A97448003C7EAB /* TOTPLoggedInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPLoggedInView.swift; sourceTree = "<group>"; };
+		760116B529A97448003C7EAB /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		760116B629A97448003C7EAB /* DescopeWrappers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescopeWrappers.swift; sourceTree = "<group>"; };
+		760116B729A97448003C7EAB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		760116B829A97448003C7EAB /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		760116BA29A97448003C7EAB /* OAuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthView.swift; sourceTree = "<group>"; };
+		760116BC29A97448003C7EAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		760116BE29A97448003C7EAB /* LoginScreenDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = LoginScreenDemo.xcodeproj; sourceTree = "<group>"; };
+		760116C129A97448003C7EAB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		760116C329A97448003C7EAB /* .!54591!.DS_Store */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".!54591!.DS_Store"; sourceTree = "<group>"; };
+		760116C429A97448003C7EAB /* .!54390!.DS_Store */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".!54390!.DS_Store"; sourceTree = "<group>"; };
+		760116C629A97448003C7EAB /* SignUpMagicLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpMagicLink.swift; sourceTree = "<group>"; };
+		760116C729A97448003C7EAB /* MagicLinkLoggedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicLinkLoggedIn.swift; sourceTree = "<group>"; };
+		760116C829A97448003C7EAB /* MagicLinkUpdateEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicLinkUpdateEmail.swift; sourceTree = "<group>"; };
+		760116C929A97448003C7EAB /* MagicLinkUpdatePhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicLinkUpdatePhone.swift; sourceTree = "<group>"; };
+		760116CA29A97448003C7EAB /* VerifyMagicLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyMagicLinkView.swift; sourceTree = "<group>"; };
+		760116CB29A97448003C7EAB /* SignInMagicLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMagicLink.swift; sourceTree = "<group>"; };
+		760116CC29A97448003C7EAB /* MagicLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicLinkView.swift; sourceTree = "<group>"; };
+		760116CD29A97448003C7EAB /* SignUpOrInMagicLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpOrInMagicLink.swift; sourceTree = "<group>"; };
+		760116CF29A97448003C7EAB /* OAuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthView.swift; sourceTree = "<group>"; };
+		760116D029A97448003C7EAB /* .!54476!.DS_Store */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".!54476!.DS_Store"; sourceTree = "<group>"; };
+		760116D229A97448003C7EAB /* LoginScreenDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoginScreenDemo.xcdatamodel; sourceTree = "<group>"; };
+		760116D329A97448003C7EAB /* .!54508!.DS_Store */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".!54508!.DS_Store"; sourceTree = "<group>"; };
+		760116D529A97448003C7EAB /* EnchantedLinkUpdateEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkUpdateEmail.swift; sourceTree = "<group>"; };
+		760116D629A97448003C7EAB /* EnchantedLinkSignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkSignUpView.swift; sourceTree = "<group>"; };
+		760116D729A97448003C7EAB /* EnchantedLinkDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkDisplayView.swift; sourceTree = "<group>"; };
+		760116D829A97448003C7EAB /* EnchantedLinkLoggedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkLoggedIn.swift; sourceTree = "<group>"; };
+		760116D929A97448003C7EAB /* EnchantedLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkView.swift; sourceTree = "<group>"; };
+		760116DA29A97448003C7EAB /* EnchantedLinkSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkSignIn.swift; sourceTree = "<group>"; };
+		760116DB29A97448003C7EAB /* EnchantedLinkSignUpOrIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnchantedLinkSignUpOrIn.swift; sourceTree = "<group>"; };
+		760116DD29A97448003C7EAB /* SignUpOrInOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpOrInOTP.swift; sourceTree = "<group>"; };
+		760116DE29A97448003C7EAB /* VerifyOTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyOTPView.swift; sourceTree = "<group>"; };
+		760116DF29A97448003C7EAB /* OTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		760116E029A97448003C7EAB /* SignInOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInOTP.swift; sourceTree = "<group>"; };
+		760116E129A97448003C7EAB /* OTPLoggedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoggedIn.swift; sourceTree = "<group>"; };
+		760116E229A97448003C7EAB /* OTPUpdatePhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPUpdatePhone.swift; sourceTree = "<group>"; };
+		760116E329A97448003C7EAB /* OTPUpdateEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPUpdateEmail.swift; sourceTree = "<group>"; };
+		760116E429A97448003C7EAB /* SignUpOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpOTP.swift; sourceTree = "<group>"; };
+		760116E529A97448003C7EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		760116E729A97448003C7EAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		760116E929A97448003C7EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		760116EA29A97448003C7EAB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		760116EC29A97448003C7EAB /* SSOView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSOView.swift; sourceTree = "<group>"; };
+		760116ED29A97448003C7EAB /* .!54704!.DS_Store */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".!54704!.DS_Store"; sourceTree = "<group>"; };
+		760116EE29A97448003C7EAB /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		760116EF29A97448003C7EAB /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		760116F029A97448003C7EAB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		760116F129A97448003C7EAB /* DescopeWrappers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescopeWrappers.swift; sourceTree = "<group>"; };
+		760116F329A97448003C7EAB /* TOTPSignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPSignInView.swift; sourceTree = "<group>"; };
+		760116F429A97448003C7EAB /* TOTPSignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPSignUpView.swift; sourceTree = "<group>"; };
+		760116F529A97448003C7EAB /* TOTPVerifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPVerifyView.swift; sourceTree = "<group>"; };
+		760116F629A97448003C7EAB /* TOTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPView.swift; sourceTree = "<group>"; };
+		760116F729A97448003C7EAB /* TOTPDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPDisplayView.swift; sourceTree = "<group>"; };
+		760116F829A97448003C7EAB /* TOTPLoggedInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOTPLoggedInView.swift; sourceTree = "<group>"; };
+		760116F929A97448003C7EAB /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		760116FA29A97448003C7EAB /* .!54618!.DS_Store */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".!54618!.DS_Store"; sourceTree = "<group>"; };
+		760116FB29A97448003C7EAB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		760116FC29A97448003C7EAB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		760116FD29A97448003C7EAB /* LoggedInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
+		760116FE29A97448003C7EAB /* .!54565!.DS_Store */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".!54565!.DS_Store"; sourceTree = "<group>"; };
+		7601170829A97448003C7EAB /* LoggedInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
+		7601170A29A97449003C7EAB /* SignUpMagicLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpMagicLink.swift; sourceTree = "<group>"; };
+		7601170B29A97449003C7EAB /* MagicLinkLoggedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicLinkLoggedIn.swift; sourceTree = "<group>"; };
+		7601170C29A97449003C7EAB /* MagicLinkUpdateEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicLinkUpdateEmail.swift; sourceTree = "<group>"; };
+		7601170D29A97449003C7EAB /* MagicLinkUpdatePhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicLinkUpdatePhone.swift; sourceTree = "<group>"; };
+		7601170E29A97449003C7EAB /* VerifyMagicLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyMagicLinkView.swift; sourceTree = "<group>"; };
+		7601170F29A97449003C7EAB /* SignInMagicLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMagicLink.swift; sourceTree = "<group>"; };
+		7601171029A97449003C7EAB /* MagicLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicLinkView.swift; sourceTree = "<group>"; };
+		7601171129A97449003C7EAB /* SignUpOrInMagicLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpOrInMagicLink.swift; sourceTree = "<group>"; };
+		7601171229A97449003C7EAB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7601171329A97449003C7EAB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7601171429A97449003C7EAB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7601171629A97449003C7EAB /* SignUpOrInOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpOrInOTP.swift; sourceTree = "<group>"; };
+		7601171729A97449003C7EAB /* VerifyOTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyOTPView.swift; sourceTree = "<group>"; };
+		7601171829A97449003C7EAB /* OTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		7601171929A97449003C7EAB /* SignInOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInOTP.swift; sourceTree = "<group>"; };
+		7601171A29A97449003C7EAB /* OTPLoggedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPLoggedIn.swift; sourceTree = "<group>"; };
+		7601171B29A97449003C7EAB /* OTPUpdatePhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPUpdatePhone.swift; sourceTree = "<group>"; };
+		7601171C29A97449003C7EAB /* OTPUpdateEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPUpdateEmail.swift; sourceTree = "<group>"; };
+		7601171D29A97449003C7EAB /* SignUpOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpOTP.swift; sourceTree = "<group>"; };
+		7601177F29A974D6003C7EAB /* swift-sdk */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-sdk"; path = "../../swift-sdk"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7601168B29A973F3003C7EAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7601168529A973F3003C7EAB = {
+			isa = PBXGroup;
+			children = (
+				7601177D29A974B8003C7EAB /* Packages */,
+				7601169029A973F3003C7EAB /* Descope-Swift-Sample-App */,
+				7601168F29A973F3003C7EAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7601168F29A973F3003C7EAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7601168E29A973F3003C7EAB /* Descope-Swift-Sample-App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7601169029A973F3003C7EAB /* Descope-Swift-Sample-App */ = {
+			isa = PBXGroup;
+			children = (
+				760116B829A97448003C7EAB /* .env */,
+				760116AD29A97448003C7EAB /* AppDelegate.swift */,
+				760116A429A97448003C7EAB /* Assets.xcassets */,
+				760116B529A97448003C7EAB /* ContentView.swift */,
+				760116B629A97448003C7EAB /* DescopeWrappers.swift */,
+				760116A529A97448003C7EAB /* EnchantedLink */,
+				7601171229A97449003C7EAB /* Info.plist */,
+				7601171329A97449003C7EAB /* LaunchScreen.storyboard */,
+				7601170829A97448003C7EAB /* LoggedInView.swift */,
+				760116A229A97448003C7EAB /* LoginScreenDemo.xcdatamodeld */,
+				7601170929A97449003C7EAB /* MagicLink */,
+				760116B929A97448003C7EAB /* OAuth */,
+				7601171529A97449003C7EAB /* OTP */,
+				760116BB29A97448003C7EAB /* Preview Content */,
+				760116B729A97448003C7EAB /* README.md */,
+				7601171429A97449003C7EAB /* SceneDelegate.swift */,
+				760116A029A97448003C7EAB /* SSO */,
+				760116BD29A97448003C7EAB /* SwiftUIDevelopment */,
+				760116AE29A97448003C7EAB /* TOTP */,
+			);
+			path = "Descope-Swift-Sample-App";
+			sourceTree = "<group>";
+		};
+		760116A029A97448003C7EAB /* SSO */ = {
+			isa = PBXGroup;
+			children = (
+				760116A129A97448003C7EAB /* SSOView.swift */,
+			);
+			path = SSO;
+			sourceTree = "<group>";
+		};
+		760116A529A97448003C7EAB /* EnchantedLink */ = {
+			isa = PBXGroup;
+			children = (
+				760116A629A97448003C7EAB /* EnchantedLinkUpdateEmail.swift */,
+				760116A729A97448003C7EAB /* EnchantedLinkSignUpView.swift */,
+				760116A829A97448003C7EAB /* EnchantedLinkDisplayView.swift */,
+				760116A929A97448003C7EAB /* EnchantedLinkLoggedIn.swift */,
+				760116AA29A97448003C7EAB /* EnchantedLinkView.swift */,
+				760116AB29A97448003C7EAB /* EnchantedLinkSignIn.swift */,
+				760116AC29A97448003C7EAB /* EnchantedLinkSignUpOrIn.swift */,
+			);
+			path = EnchantedLink;
+			sourceTree = "<group>";
+		};
+		760116AE29A97448003C7EAB /* TOTP */ = {
+			isa = PBXGroup;
+			children = (
+				760116AF29A97448003C7EAB /* TOTPSignInView.swift */,
+				760116B029A97448003C7EAB /* TOTPSignUpView.swift */,
+				760116B129A97448003C7EAB /* TOTPVerifyView.swift */,
+				760116B229A97448003C7EAB /* TOTPView.swift */,
+				760116B329A97448003C7EAB /* TOTPDisplayView.swift */,
+				760116B429A97448003C7EAB /* TOTPLoggedInView.swift */,
+			);
+			path = TOTP;
+			sourceTree = "<group>";
+		};
+		760116B929A97448003C7EAB /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				760116BA29A97448003C7EAB /* OAuthView.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		760116BB29A97448003C7EAB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				760116BC29A97448003C7EAB /* Preview Assets.xcassets */,
+			);
+			name = "Preview Content";
+			path = "../../../../../../../../Documents/Swift/SwiftUIDevelopment/LoginScreenDemo/Preview Content";
+			sourceTree = "<group>";
+		};
+		760116BD29A97448003C7EAB /* SwiftUIDevelopment */ = {
+			isa = PBXGroup;
+			children = (
+				760116BE29A97448003C7EAB /* LoginScreenDemo.xcodeproj */,
+				760116C129A97448003C7EAB /* README.md */,
+				760116C229A97448003C7EAB /* LoginScreenDemo */,
+			);
+			path = SwiftUIDevelopment;
+			sourceTree = "<group>";
+		};
+		760116BF29A97448003C7EAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7601170329A97448003C7EAB /* LoginScreenDemo.app */,
+				7601170529A97448003C7EAB /* LoginScreenDemoTests.xctest */,
+				7601170729A97448003C7EAB /* LoginScreenDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		760116C229A97448003C7EAB /* LoginScreenDemo */ = {
+			isa = PBXGroup;
+			children = (
+				760116C329A97448003C7EAB /* .!54591!.DS_Store */,
+				760116C429A97448003C7EAB /* .!54390!.DS_Store */,
+				760116C529A97448003C7EAB /* MagicLink */,
+				760116CE29A97448003C7EAB /* OAuth */,
+				760116D029A97448003C7EAB /* .!54476!.DS_Store */,
+				760116D129A97448003C7EAB /* LoginScreenDemo.xcdatamodeld */,
+				760116D329A97448003C7EAB /* .!54508!.DS_Store */,
+				760116D429A97448003C7EAB /* EnchantedLink */,
+				760116DC29A97448003C7EAB /* OTP */,
+				760116E529A97448003C7EAB /* Assets.xcassets */,
+				760116E629A97448003C7EAB /* Preview Content */,
+				760116E829A97448003C7EAB /* LaunchScreen.storyboard */,
+				760116EA29A97448003C7EAB /* README.md */,
+				760116EB29A97448003C7EAB /* SSO */,
+				760116ED29A97448003C7EAB /* .!54704!.DS_Store */,
+				760116EE29A97448003C7EAB /* .env */,
+				760116EF29A97448003C7EAB /* SwiftUIView.swift */,
+				760116F029A97448003C7EAB /* AppDelegate.swift */,
+				760116F129A97448003C7EAB /* DescopeWrappers.swift */,
+				760116F229A97448003C7EAB /* TOTP */,
+				760116F929A97448003C7EAB /* ContentView.swift */,
+				760116FA29A97448003C7EAB /* .!54618!.DS_Store */,
+				760116FB29A97448003C7EAB /* Info.plist */,
+				760116FC29A97448003C7EAB /* SceneDelegate.swift */,
+				760116FD29A97448003C7EAB /* LoggedInView.swift */,
+				760116FE29A97448003C7EAB /* .!54565!.DS_Store */,
+			);
+			path = LoginScreenDemo;
+			sourceTree = "<group>";
+		};
+		760116C529A97448003C7EAB /* MagicLink */ = {
+			isa = PBXGroup;
+			children = (
+				760116C629A97448003C7EAB /* SignUpMagicLink.swift */,
+				760116C729A97448003C7EAB /* MagicLinkLoggedIn.swift */,
+				760116C829A97448003C7EAB /* MagicLinkUpdateEmail.swift */,
+				760116C929A97448003C7EAB /* MagicLinkUpdatePhone.swift */,
+				760116CA29A97448003C7EAB /* VerifyMagicLinkView.swift */,
+				760116CB29A97448003C7EAB /* SignInMagicLink.swift */,
+				760116CC29A97448003C7EAB /* MagicLinkView.swift */,
+				760116CD29A97448003C7EAB /* SignUpOrInMagicLink.swift */,
+			);
+			path = MagicLink;
+			sourceTree = "<group>";
+		};
+		760116CE29A97448003C7EAB /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				760116CF29A97448003C7EAB /* OAuthView.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		760116D429A97448003C7EAB /* EnchantedLink */ = {
+			isa = PBXGroup;
+			children = (
+				760116D529A97448003C7EAB /* EnchantedLinkUpdateEmail.swift */,
+				760116D629A97448003C7EAB /* EnchantedLinkSignUpView.swift */,
+				760116D729A97448003C7EAB /* EnchantedLinkDisplayView.swift */,
+				760116D829A97448003C7EAB /* EnchantedLinkLoggedIn.swift */,
+				760116D929A97448003C7EAB /* EnchantedLinkView.swift */,
+				760116DA29A97448003C7EAB /* EnchantedLinkSignIn.swift */,
+				760116DB29A97448003C7EAB /* EnchantedLinkSignUpOrIn.swift */,
+			);
+			path = EnchantedLink;
+			sourceTree = "<group>";
+		};
+		760116DC29A97448003C7EAB /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				760116DD29A97448003C7EAB /* SignUpOrInOTP.swift */,
+				760116DE29A97448003C7EAB /* VerifyOTPView.swift */,
+				760116DF29A97448003C7EAB /* OTPView.swift */,
+				760116E029A97448003C7EAB /* SignInOTP.swift */,
+				760116E129A97448003C7EAB /* OTPLoggedIn.swift */,
+				760116E229A97448003C7EAB /* OTPUpdatePhone.swift */,
+				760116E329A97448003C7EAB /* OTPUpdateEmail.swift */,
+				760116E429A97448003C7EAB /* SignUpOTP.swift */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
+		760116E629A97448003C7EAB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				760116E729A97448003C7EAB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		760116EB29A97448003C7EAB /* SSO */ = {
+			isa = PBXGroup;
+			children = (
+				760116EC29A97448003C7EAB /* SSOView.swift */,
+			);
+			path = SSO;
+			sourceTree = "<group>";
+		};
+		760116F229A97448003C7EAB /* TOTP */ = {
+			isa = PBXGroup;
+			children = (
+				760116F329A97448003C7EAB /* TOTPSignInView.swift */,
+				760116F429A97448003C7EAB /* TOTPSignUpView.swift */,
+				760116F529A97448003C7EAB /* TOTPVerifyView.swift */,
+				760116F629A97448003C7EAB /* TOTPView.swift */,
+				760116F729A97448003C7EAB /* TOTPDisplayView.swift */,
+				760116F829A97448003C7EAB /* TOTPLoggedInView.swift */,
+			);
+			path = TOTP;
+			sourceTree = "<group>";
+		};
+		7601170929A97449003C7EAB /* MagicLink */ = {
+			isa = PBXGroup;
+			children = (
+				7601170A29A97449003C7EAB /* SignUpMagicLink.swift */,
+				7601170B29A97449003C7EAB /* MagicLinkLoggedIn.swift */,
+				7601170C29A97449003C7EAB /* MagicLinkUpdateEmail.swift */,
+				7601170D29A97449003C7EAB /* MagicLinkUpdatePhone.swift */,
+				7601170E29A97449003C7EAB /* VerifyMagicLinkView.swift */,
+				7601170F29A97449003C7EAB /* SignInMagicLink.swift */,
+				7601171029A97449003C7EAB /* MagicLinkView.swift */,
+				7601171129A97449003C7EAB /* SignUpOrInMagicLink.swift */,
+			);
+			path = MagicLink;
+			sourceTree = "<group>";
+		};
+		7601171529A97449003C7EAB /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				7601171629A97449003C7EAB /* SignUpOrInOTP.swift */,
+				7601171729A97449003C7EAB /* VerifyOTPView.swift */,
+				7601171829A97449003C7EAB /* OTPView.swift */,
+				7601171929A97449003C7EAB /* SignInOTP.swift */,
+				7601171A29A97449003C7EAB /* OTPLoggedIn.swift */,
+				7601171B29A97449003C7EAB /* OTPUpdatePhone.swift */,
+				7601171C29A97449003C7EAB /* OTPUpdateEmail.swift */,
+				7601171D29A97449003C7EAB /* SignUpOTP.swift */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
+		7601177D29A974B8003C7EAB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				7601177F29A974D6003C7EAB /* swift-sdk */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7601168D29A973F3003C7EAB /* Descope-Swift-Sample-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7601169D29A973F4003C7EAB /* Build configuration list for PBXNativeTarget "Descope-Swift-Sample-App" */;
+			buildPhases = (
+				7601168A29A973F3003C7EAB /* Sources */,
+				7601168B29A973F3003C7EAB /* Frameworks */,
+				7601168C29A973F3003C7EAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Descope-Swift-Sample-App";
+			productName = "Descope-Swift-Sample-App";
+			productReference = 7601168E29A973F3003C7EAB /* Descope-Swift-Sample-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7601168629A973F3003C7EAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					7601168D29A973F3003C7EAB = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+				};
+			};
+			buildConfigurationList = 7601168929A973F3003C7EAB /* Build configuration list for PBXProject "Descope-Swift-Sample-App" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7601168529A973F3003C7EAB;
+			productRefGroup = 7601168F29A973F3003C7EAB /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 760116BF29A97448003C7EAB /* Products */;
+					ProjectRef = 760116BE29A97448003C7EAB /* LoginScreenDemo.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				7601168D29A973F3003C7EAB /* Descope-Swift-Sample-App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7601170329A97448003C7EAB /* LoginScreenDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LoginScreenDemo.app;
+			remoteRef = 7601170229A97448003C7EAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7601170529A97448003C7EAB /* LoginScreenDemoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LoginScreenDemoTests.xctest;
+			remoteRef = 7601170429A97448003C7EAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7601170729A97448003C7EAB /* LoginScreenDemoUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LoginScreenDemoUITests.xctest;
+			remoteRef = 7601170629A97448003C7EAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7601168C29A973F3003C7EAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7601175929A97449003C7EAB /* .env in Resources */,
+				7601173629A97449003C7EAB /* .!54591!.DS_Store in Resources */,
+				7601175429A97449003C7EAB /* Preview Assets.xcassets in Resources */,
+				7601175829A97449003C7EAB /* .!54704!.DS_Store in Resources */,
+				7601173429A97449003C7EAB /* Preview Assets.xcassets in Resources */,
+				7601173229A97449003C7EAB /* .env in Resources */,
+				7601175629A97449003C7EAB /* README.md in Resources */,
+				7601176829A97449003C7EAB /* .!54565!.DS_Store in Resources */,
+				7601173529A97449003C7EAB /* README.md in Resources */,
+				7601175329A97449003C7EAB /* Assets.xcassets in Resources */,
+				7601174129A97449003C7EAB /* .!54476!.DS_Store in Resources */,
+				7601177329A97449003C7EAB /* LaunchScreen.storyboard in Resources */,
+				7601176429A97449003C7EAB /* .!54618!.DS_Store in Resources */,
+				7601173129A97449003C7EAB /* README.md in Resources */,
+				7601174329A97449003C7EAB /* .!54508!.DS_Store in Resources */,
+				7601175529A97449003C7EAB /* LaunchScreen.storyboard in Resources */,
+				7601173729A97449003C7EAB /* .!54390!.DS_Store in Resources */,
+				7601172029A97449003C7EAB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7601168A29A973F3003C7EAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7601172329A97449003C7EAB /* EnchantedLinkDisplayView.swift in Sources */,
+				7601176329A97449003C7EAB /* ContentView.swift in Sources */,
+				7601172429A97449003C7EAB /* EnchantedLinkLoggedIn.swift in Sources */,
+				7601176129A97449003C7EAB /* TOTPDisplayView.swift in Sources */,
+				7601174629A97449003C7EAB /* EnchantedLinkDisplayView.swift in Sources */,
+				7601176E29A97449003C7EAB /* VerifyMagicLinkView.swift in Sources */,
+				7601175729A97449003C7EAB /* SSOView.swift in Sources */,
+				7601171F29A97449003C7EAB /* LoginScreenDemo.xcdatamodeld in Sources */,
+				7601177429A97449003C7EAB /* SceneDelegate.swift in Sources */,
+				7601172C29A97449003C7EAB /* TOTPView.swift in Sources */,
+				7601175A29A97449003C7EAB /* SwiftUIView.swift in Sources */,
+				7601176A29A97449003C7EAB /* SignUpMagicLink.swift in Sources */,
+				7601174E29A97449003C7EAB /* SignInOTP.swift in Sources */,
+				7601174429A97449003C7EAB /* EnchantedLinkUpdateEmail.swift in Sources */,
+				7601172D29A97449003C7EAB /* TOTPDisplayView.swift in Sources */,
+				7601177B29A97449003C7EAB /* OTPUpdateEmail.swift in Sources */,
+				7601172A29A97449003C7EAB /* TOTPSignUpView.swift in Sources */,
+				7601172229A97449003C7EAB /* EnchantedLinkSignUpView.swift in Sources */,
+				7601175B29A97449003C7EAB /* AppDelegate.swift in Sources */,
+				7601176629A97449003C7EAB /* SceneDelegate.swift in Sources */,
+				7601177C29A97449003C7EAB /* SignUpOTP.swift in Sources */,
+				7601174C29A97449003C7EAB /* VerifyOTPView.swift in Sources */,
+				7601174529A97449003C7EAB /* EnchantedLinkSignUpView.swift in Sources */,
+				7601172F29A97449003C7EAB /* ContentView.swift in Sources */,
+				7601173329A97449003C7EAB /* OAuthView.swift in Sources */,
+				7601173D29A97449003C7EAB /* SignInMagicLink.swift in Sources */,
+				7601174B29A97449003C7EAB /* SignUpOrInOTP.swift in Sources */,
+				7601172729A97449003C7EAB /* EnchantedLinkSignUpOrIn.swift in Sources */,
+				7601174229A97449003C7EAB /* LoginScreenDemo.xcdatamodeld in Sources */,
+				7601174929A97449003C7EAB /* EnchantedLinkSignIn.swift in Sources */,
+				7601174829A97449003C7EAB /* EnchantedLinkView.swift in Sources */,
+				7601175C29A97449003C7EAB /* DescopeWrappers.swift in Sources */,
+				7601172629A97449003C7EAB /* EnchantedLinkSignIn.swift in Sources */,
+				7601174729A97449003C7EAB /* EnchantedLinkLoggedIn.swift in Sources */,
+				7601177929A97449003C7EAB /* OTPLoggedIn.swift in Sources */,
+				7601177129A97449003C7EAB /* SignUpOrInMagicLink.swift in Sources */,
+				7601173C29A97449003C7EAB /* VerifyMagicLinkView.swift in Sources */,
+				7601175E29A97449003C7EAB /* TOTPSignUpView.swift in Sources */,
+				7601176C29A97449003C7EAB /* MagicLinkUpdateEmail.swift in Sources */,
+				7601175229A97449003C7EAB /* SignUpOTP.swift in Sources */,
+				7601173F29A97449003C7EAB /* SignUpOrInMagicLink.swift in Sources */,
+				7601175F29A97449003C7EAB /* TOTPVerifyView.swift in Sources */,
+				7601177829A97449003C7EAB /* SignInOTP.swift in Sources */,
+				7601172129A97449003C7EAB /* EnchantedLinkUpdateEmail.swift in Sources */,
+				7601174A29A97449003C7EAB /* EnchantedLinkSignUpOrIn.swift in Sources */,
+				7601176F29A97449003C7EAB /* SignInMagicLink.swift in Sources */,
+				7601172529A97449003C7EAB /* EnchantedLinkView.swift in Sources */,
+				7601172B29A97449003C7EAB /* TOTPVerifyView.swift in Sources */,
+				7601176029A97449003C7EAB /* TOTPView.swift in Sources */,
+				7601175D29A97449003C7EAB /* TOTPSignInView.swift in Sources */,
+				7601176729A97449003C7EAB /* LoggedInView.swift in Sources */,
+				7601177529A97449003C7EAB /* SignUpOrInOTP.swift in Sources */,
+				7601172E29A97449003C7EAB /* TOTPLoggedInView.swift in Sources */,
+				7601172929A97449003C7EAB /* TOTPSignInView.swift in Sources */,
+				7601173929A97449003C7EAB /* MagicLinkLoggedIn.swift in Sources */,
+				7601172829A97449003C7EAB /* AppDelegate.swift in Sources */,
+				7601176B29A97449003C7EAB /* MagicLinkLoggedIn.swift in Sources */,
+				7601173829A97449003C7EAB /* SignUpMagicLink.swift in Sources */,
+				7601177A29A97449003C7EAB /* OTPUpdatePhone.swift in Sources */,
+				7601174D29A97449003C7EAB /* OTPView.swift in Sources */,
+				7601173A29A97449003C7EAB /* MagicLinkUpdateEmail.swift in Sources */,
+				7601177729A97449003C7EAB /* OTPView.swift in Sources */,
+				7601175029A97449003C7EAB /* OTPUpdatePhone.swift in Sources */,
+				7601176229A97449003C7EAB /* TOTPLoggedInView.swift in Sources */,
+				7601171E29A97449003C7EAB /* SSOView.swift in Sources */,
+				7601176929A97449003C7EAB /* LoggedInView.swift in Sources */,
+				7601173029A97449003C7EAB /* DescopeWrappers.swift in Sources */,
+				7601173E29A97449003C7EAB /* MagicLinkView.swift in Sources */,
+				7601176D29A97449003C7EAB /* MagicLinkUpdatePhone.swift in Sources */,
+				7601174029A97449003C7EAB /* OAuthView.swift in Sources */,
+				7601174F29A97449003C7EAB /* OTPLoggedIn.swift in Sources */,
+				7601173B29A97449003C7EAB /* MagicLinkUpdatePhone.swift in Sources */,
+				7601177029A97449003C7EAB /* MagicLinkView.swift in Sources */,
+				7601175129A97449003C7EAB /* OTPUpdateEmail.swift in Sources */,
+				7601177629A97449003C7EAB /* VerifyOTPView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		760116E829A97448003C7EAB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				760116E929A97448003C7EAB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7601169B29A973F4003C7EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7601169C29A973F4003C7EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7601169E29A973F4003C7EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Descope-Swift-Sample-App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Descope Sample App";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Descope-Swift-Sample-App.Descope-Swift-Sample-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7601169F29A973F4003C7EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Descope-Swift-Sample-App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Descope Sample App";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Descope-Swift-Sample-App.Descope-Swift-Sample-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7601168929A973F3003C7EAB /* Build configuration list for PBXProject "Descope-Swift-Sample-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7601169B29A973F4003C7EAB /* Debug */,
+				7601169C29A973F4003C7EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7601169D29A973F4003C7EAB /* Build configuration list for PBXNativeTarget "Descope-Swift-Sample-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7601169E29A973F4003C7EAB /* Debug */,
+				7601169F29A973F4003C7EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		760116A229A97448003C7EAB /* LoginScreenDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				760116A329A97448003C7EAB /* LoginScreenDemo.xcdatamodel */,
+			);
+			currentVersion = 760116A329A97448003C7EAB /* LoginScreenDemo.xcdatamodel */;
+			path = LoginScreenDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		760116D129A97448003C7EAB /* LoginScreenDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				760116D229A97448003C7EAB /* LoginScreenDemo.xcdatamodel */,
+			);
+			currentVersion = 760116D229A97448003C7EAB /* LoginScreenDemo.xcdatamodel */;
+			path = LoginScreenDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7601168629A973F3003C7EAB /* Project object */;
+}
