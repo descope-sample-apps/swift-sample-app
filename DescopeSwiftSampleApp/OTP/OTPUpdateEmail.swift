@@ -1,6 +1,6 @@
 //
 //  OTPUpdateEmail.swift
-//  LoginScreenDemo
+//  Descope-Swift-Sample-App
 //
 //  Created by Descope 2023
 //
@@ -56,15 +56,6 @@ struct OTPUpdateEmail: View {
                                         message: Text((resultError!.errorDescription!))
                                     )
                                 }
-                        /*NavigationLink(destination: VerifyOTPView(loginId:loginId, method: "email").navigationBarBackButtonHidden(true)) {
-                            Text("OTP Update Email")
-                                .padding()
-                        }.background(Color.black)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(10)
-                        .simultaneousGesture(TapGesture().onEnded{
-                            otpUpdateEmail(loginId: loginId, email: userEmail)
-                        })*/
                     }
                     
                     NavigationLink(destination: VerifyOTPView(loginId:loginId, method: "email").navigationBarBackButtonHidden(true), isActive: $initiated) {
