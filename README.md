@@ -6,8 +6,9 @@ iOS Sample app using Descope for authentication. this app includes
 This sample app allows you to get familiar with the Descope Swift SDK. It has all of the supported authentication functions built into it for you to test with.
 
 ###  Run the app
-1. Close this repo
+1. Clone this repo
 2. Open the project within Xcode
-3. Set the `projectId` within the DescopeWrappers file
-`let descope_client = DescopeSDK(config: DescopeConfig(projectId: "<project_id>"))`
-4. Start the simulator by clicking the play button towards the top left of XCode
+3. Within Set the project settings of the project, change the `myProjectId`
+4. Optionally, if you are using a custom CNAME, you can also change the myBaseURL
+5. Run the simulator within Xcode - The play button located in the top left
+

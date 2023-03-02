@@ -1,6 +1,6 @@
 //
 //  EnchantedLinkSignUpView.swift
-//  LoginScreenDemo
+//  Descope-Swift-Sample-App
 //
 //  Created by Descope 2023
 //
