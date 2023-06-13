@@ -31,28 +31,13 @@ struct PasswordsView: View {
                         .foregroundColor(Color.white)
                         .cornerRadius(10)
                 
-//                NavigationLink(destination: SignInPasswords().navigationBarBackButtonHidden(true)) {
-//                    Text("Replace Password")
-//                        .padding()
-//                }.background(Color.black)
-//                    .foregroundColor(Color.white)
-//                    .cornerRadius(10)
-//                
-//                NavigationLink(destination: SignInPasswords().navigationBarBackButtonHidden(true)) {
-//                    Text("Send Reset")
-//                        .padding()
-//                }.background(Color.black)
-//                    .foregroundColor(Color.white)
-//                    .cornerRadius(10)
-//                
-//                
-//                NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)) {
-//                    Text("Back to home screen")
-//                        .padding()
-//                }
-//                .background(Color.black)
-//                .foregroundColor(Color.white)
-//                .cornerRadius(10)
+                NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)) {
+                    Text("Back to home screen")
+                        .padding()
+                }
+                .background(Color.black)
+                .foregroundColor(Color.white)
+                .cornerRadius(10)
                 
             }.padding(.horizontal, CGFloat(verticalPaddingForForm))
         }
