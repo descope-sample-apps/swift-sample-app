@@ -69,6 +69,13 @@ struct ContentView: View {
                         }.background(Color.black)
                             .foregroundColor(Color.white)
                             .cornerRadius(10)
+                        
+                        NavigationLink(destination: PasswordsView().navigationBarBackButtonHidden(true)) {
+                            Text("Passwords")
+                                .padding()
+                        }.background(Color.black)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(10)
                     }.padding()
                 }.padding(.horizontal, CGFloat(verticalPaddingForForm))
             }
