@@ -467,37 +467,16 @@ class SSOLoginSession: NSObject,
 
 // Passwords
 func passwordsSignUp (userPassword: String, userEmail: String, loginId: String, userPhone: String, name: String, method: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
-    let myUser = User(name: name, phone: userPhone, email: userEmail)
+    let signUpDetails = SignUpDetails(name: name, phone: userPhone, email: userEmail)
     Task {
         do {
-            print(myUser)
+            print(signUpDetails)
             print("Login ID: " + loginId)
-            if method == "email" {
-//                try await Descope.password.signUp(with: DeliveryMethod.email, loginId: loginId, user: myUser)
-            } else if method == "sms" {
-                try await Descope.otp.signUp(with: DeliveryMethod.sms, loginId: loginId, details: myUser)
-            }
-            print("Successfully initiated OTP Sign Up")
-            completionHandler(true, nil)
-        } catch let descopeErr as DescopeError {
-            print(descopeErr)
-            completionHandler(false, descopeErr)
-        }
-    }
-}
+            try await Descope.password.signUp(loginId: loginId, password: userPassword, details: signUpDetails)
 
-func passwordsSignUpOrIn (userPassword: String, loginId: String, method: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
-    Task {
-        do {
-            if method == "email" {
-                try await Descope.otp.signUpOrIn(with: .email, loginId: loginId)
-            } else if method == "sms" {
-                try await Descope.otp.signUpOrIn(with: .sms, loginId: loginId)
-            }
-            print("Successfully initiated OTP Sign Up or In")
+            print("Successfully initiated Password Sign Up")
             completionHandler(true, nil)
         } catch let descopeErr as DescopeError {
-            //let descopeError = DescopeError(error as Any)
             print(descopeErr)
             completionHandler(false, descopeErr)
         }
@@ -507,12 +486,8 @@ func passwordsSignUpOrIn (userPassword: String, loginId: String, method: String,
 func passwordsSignIn (userPassword: String, loginId: String, method: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     Task {
         do {
-            if method == "email" {
-                try await Descope.otp.signIn(with: .email, loginId: loginId)
-            } else if method == "sms" {
-                try await Descope.otp.signIn(with: .sms, loginId: loginId)
-            }
-            print("Successfully initiated OTP Sign In")
+            try await Descope.password.signIn(loginId: loginId, password: userPassword)
+            print("Successfully initiated Password Sign In")
             completionHandler(true, nil)
         } catch let descopeErr as DescopeError {
             print(descopeErr)
@@ -521,19 +496,11 @@ func passwordsSignIn (userPassword: String, loginId: String, method: String, com
     }
 }
 
-func passwordsVerify (verifyCode: String, loginId: String, method: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
+func passwordsUpdate (newPassword: String, loginId: String, refreshJwt: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     Task {
         do {
-            if method == "email" {
-                let authResponse = try await Descope.otp.verify(with: .email, loginId: loginId, code: verifyCode)
-                descopeSession = DescopeSession(from: authResponse)
-                print(descopeSession as Any)
-            } else if method == "sms" {
-                let authResponse = try await Descope.otp.verify(with: .sms, loginId: loginId, code: verifyCode)
-                descopeSession = DescopeSession(from: authResponse)
-                print(descopeSession as Any)
-            }
-            print("Successfully verified OTP Code")
+            try await Descope.password.update(loginId: loginId, newPassword: newPassword, refreshJwt: refreshJwt)
+            print("Successfully initiated Password Update")
             completionHandler(true, nil)
         } catch let descopeErr as DescopeError {
             print(descopeErr)
@@ -542,11 +509,11 @@ func passwordsVerify (verifyCode: String, loginId: String, method: String, compl
     }
 }
 
-func passwordsUpdateEmail (loginId: String, email: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
+func passwordsReplace (newPassword: String, loginId: String, oldPassword: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     Task {
         do {
-            try await Descope.otp.updateEmail(email, loginId: loginId, refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
-            print("Successfully started OTP Email Update")
+            try await Descope.password.replace(loginId: loginId, newPassword: newPassword, oldPassword: oldPassword)
+            print("Successfully initiated Password Replace")
             completionHandler(true, nil)
         } catch let descopeErr as DescopeError {
             print(descopeErr)
@@ -555,14 +522,11 @@ func passwordsUpdateEmail (loginId: String, email: String, completionHandler: @e
     }
 }
 
-func passwordsUpdatePhone (loginId: String, phone: String, method: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
+func passwordsSendReset (loginId: String completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     Task {
         do {
-            if method == "sms" {
-                try await Descope.otp.updatePhone(phone, with: .sms, loginId: loginId, refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
-                print("Successfully started OTP Phone Update")
-            }
-            // Later add whatsapp
+            try await Descope.password.sendReset(loginId: loginId)
+            print("Successfully initiated Password Send Reset")
             completionHandler(true, nil)
         } catch let descopeErr as DescopeError {
             print(descopeErr)
