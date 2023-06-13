@@ -512,7 +512,7 @@ func passwordsUpdate (newPassword: String, loginId: String, refreshJwt: String, 
 func passwordsReplace (newPassword: String, loginId: String, oldPassword: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     Task {
         do {
-            try await Descope.password.replace(loginId: loginId, newPassword: newPassword, oldPassword: oldPassword)
+            try await Descope.password.replace(loginId: loginId, oldPassword: oldPassword, newPassword: newPassword)
             print("Successfully initiated Password Replace")
             completionHandler(true, nil)
         } catch let descopeErr as DescopeError {
@@ -522,10 +522,10 @@ func passwordsReplace (newPassword: String, loginId: String, oldPassword: String
     }
 }
 
-func passwordsSendReset (loginId: String completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
+func passwordsSendReset (loginId: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     Task {
         do {
-            try await Descope.password.sendReset(loginId: loginId)
+            try await Descope.password.sendReset(loginId: loginId, redirectURL: nil)
             print("Successfully initiated Password Send Reset")
             completionHandler(true, nil)
         } catch let descopeErr as DescopeError {
