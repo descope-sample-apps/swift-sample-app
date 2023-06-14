@@ -76,6 +76,14 @@ struct ContentView: View {
                         }.background(Color.black)
                             .foregroundColor(Color.white)
                             .cornerRadius(10)
+                        
+                        
+                        NavigationLink(destination: FlowView().navigationBarBackButtonHidden(true)) {
+                            Text("Flow")
+                                .padding()
+                        }.background(Color.black)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(10)
                     }.padding()
                 }.padding(.horizontal, CGFloat(verticalPaddingForForm))
             }
