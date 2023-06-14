@@ -13,7 +13,7 @@ struct FlowView: View {
     @State var showAlert: Bool = false
     @State var resultError: DescopeError?
     @State var loginId: String = "";
-    var flowURL = "<web_hosted_page_flow_url>";
+    var flowURL = "<your_flow_url>";
     let verticalPaddingForForm = 20.0
     var body: some View {
         NavigationView {
@@ -54,7 +54,7 @@ struct FlowView: View {
                     .padding()
                     .cornerRadius(10)
                     
-                    NavigationLink(destination: PasswordsLoggedIn(loginId:loginId).navigationBarBackButtonHidden(true), isActive: $initiated) {
+                    NavigationLink(destination: FlowSignedIn().navigationBarBackButtonHidden(true), isActive: $initiated) {
                     }
                     
                     NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)) {
