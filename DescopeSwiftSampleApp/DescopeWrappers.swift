@@ -18,12 +18,12 @@ func otpSignUp (userEmail: String, loginId: String, userPhone: String, name: Str
     let details = SignUpDetails(name: name, phone: userPhone, email: userEmail)
     Task {
         do {
-            print(myUser)
+            print(details)
             print("Login ID: " + loginId)
             if method == "email" {
                 try await Descope.otp.signUp(with: DeliveryMethod.email, loginId: loginId, details: details)
             } else if method == "sms" {
-                try await Descope.otp.signUp(with: DeliveryMethod.sms, loginId: loginId, details: myUser)
+                try await Descope.otp.signUp(with: DeliveryMethod.sms, loginId: loginId, details: details)
             }
             print("Successfully initiated OTP Sign Up")
             completionHandler(true, nil)
