@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0838B4D72A38CC9500257D4B /* PasswordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838B4D62A38CC9500257D4B /* PasswordsView.swift */; };
+		0838B4D92A38CD4100257D4B /* SignUpPasswords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838B4D82A38CD4100257D4B /* SignUpPasswords.swift */; };
+		0838B4DB2A38CD4B00257D4B /* SignInPasswords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838B4DA2A38CD4B00257D4B /* SignInPasswords.swift */; };
+		0838B4DD2A38CD5A00257D4B /* SignUpOrInPasswords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838B4DC2A38CD5A00257D4B /* SignUpOrInPasswords.swift */; };
+		0838B4DF2A38CD6D00257D4B /* VerifyPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838B4DE2A38CD6D00257D4B /* VerifyPasswordView.swift */; };
+		0838B4E22A38CF8B00257D4B /* DescopeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0838B4E12A38CF8B00257D4B /* DescopeKit */; };
 		760CFB1E299EB0420001703E /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760CFB1D299EB0420001703E /* LoggedInView.swift */; };
 		760CFB24299EBD8A0001703E /* DescopeWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760CFB23299EBD8A0001703E /* DescopeWrappers.swift */; };
 		76A0048629A6B1DD00BFA1A4 /* MagicLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0048529A6B1DD00BFA1A4 /* MagicLinkView.swift */; };
@@ -39,7 +45,6 @@
 		76B7F5AF29A674EF0002754F /* OTPLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7F5AE29A674EF0002754F /* OTPLoggedIn.swift */; };
 		76B7F5B129A675310002754F /* OTPUpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7F5B029A675310002754F /* OTPUpdateEmail.swift */; };
 		76B7F5B329A6753B0002754F /* OTPUpdatePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7F5B229A6753B0002754F /* OTPUpdatePhone.swift */; };
-		76B8D48229B12C4A00261634 /* DescopeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 76B8D48129B12C4A00261634 /* DescopeKit */; };
 		76EC1CAA29A684150039CEB3 /* TOTPLoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC1CA929A684150039CEB3 /* TOTPLoggedInView.swift */; };
 		C001309E23D53FDF00CA3447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C001309D23D53FDF00CA3447 /* AppDelegate.swift */; };
 		C00130A023D53FDF00CA3447 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C001309F23D53FDF00CA3447 /* SceneDelegate.swift */; };
@@ -68,6 +73,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0838B4D62A38CC9500257D4B /* PasswordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsView.swift; sourceTree = "<group>"; };
+		0838B4D82A38CD4100257D4B /* SignUpPasswords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswords.swift; sourceTree = "<group>"; };
+		0838B4DA2A38CD4B00257D4B /* SignInPasswords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswords.swift; sourceTree = "<group>"; };
+		0838B4DC2A38CD5A00257D4B /* SignUpOrInPasswords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOrInPasswords.swift; sourceTree = "<group>"; };
+		0838B4DE2A38CD6D00257D4B /* VerifyPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPasswordView.swift; sourceTree = "<group>"; };
 		760CFB1D299EB0420001703E /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
 		760CFB23299EBD8A0001703E /* DescopeWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescopeWrappers.swift; sourceTree = "<group>"; };
 		76A0048529A6B1DD00BFA1A4 /* MagicLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicLinkView.swift; sourceTree = "<group>"; };
@@ -119,7 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76B8D48229B12C4A00261634 /* DescopeKit in Frameworks */,
+				0838B4E22A38CF8B00257D4B /* DescopeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +150,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0838B4D52A38CC5900257D4B /* Passwords */ = {
+			isa = PBXGroup;
+			children = (
+				0838B4D62A38CC9500257D4B /* PasswordsView.swift */,
+				0838B4D82A38CD4100257D4B /* SignUpPasswords.swift */,
+				0838B4DA2A38CD4B00257D4B /* SignInPasswords.swift */,
+				0838B4DC2A38CD5A00257D4B /* SignUpOrInPasswords.swift */,
+				0838B4DE2A38CD6D00257D4B /* VerifyPasswordView.swift */,
+			);
+			path = Passwords;
+			sourceTree = "<group>";
+		};
 		760CFB16299E77B50001703E /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +272,7 @@
 		C001309C23D53FDF00CA3447 /* DescopeSwiftSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				0838B4D52A38CC5900257D4B /* Passwords */,
 				C001309D23D53FDF00CA3447 /* AppDelegate.swift */,
 				C001309F23D53FDF00CA3447 /* SceneDelegate.swift */,
 				C00130A423D53FDF00CA3447 /* ContentView.swift */,
@@ -295,7 +318,7 @@
 			);
 			name = "Descope-Swift-Sample-App";
 			packageProductDependencies = (
-				76B8D48129B12C4A00261634 /* DescopeKit */,
+				0838B4E12A38CF8B00257D4B /* DescopeKit */,
 			);
 			productName = LoginScreenDemo;
 			productReference = C001309A23D53FDF00CA3447 /* Descope-Swift-Sample-App.app */;
@@ -370,7 +393,7 @@
 			);
 			mainGroup = C001309123D53FDF00CA3447;
 			packageReferences = (
-				76B8D48029B12C4A00261634 /* XCRemoteSwiftPackageReference "swift-sdk" */,
+				0838B4E02A38CF8A00257D4B /* XCRemoteSwiftPackageReference "swift-sdk" */,
 			);
 			productRefGroup = C001309B23D53FDF00CA3447 /* Products */;
 			projectDirPath = "";
@@ -420,6 +443,7 @@
 				760CFB1E299EB0420001703E /* LoggedInView.swift in Sources */,
 				76A0048C29A6B20300BFA1A4 /* SignUpMagicLink.swift in Sources */,
 				76B7F59E29A580530002754F /* SignUpOTP.swift in Sources */,
+				0838B4DD2A38CD5A00257D4B /* SignUpOrInPasswords.swift in Sources */,
 				76B7F5B129A675310002754F /* OTPUpdateEmail.swift in Sources */,
 				76B7F5A029A580EE0002754F /* VerifyOTPView.swift in Sources */,
 				76B7F5A429A582CE0002754F /* SignUpOrInOTP.swift in Sources */,
@@ -436,12 +460,16 @@
 				76A0048E29A6B21900BFA1A4 /* SignUpOrInMagicLink.swift in Sources */,
 				76A0049F29A6C82800BFA1A4 /* EnchantedLinkSignIn.swift in Sources */,
 				76A0048629A6B1DD00BFA1A4 /* MagicLinkView.swift in Sources */,
+				0838B4DF2A38CD6D00257D4B /* VerifyPasswordView.swift in Sources */,
+				0838B4D72A38CC9500257D4B /* PasswordsView.swift in Sources */,
+				0838B4DB2A38CD4B00257D4B /* SignInPasswords.swift in Sources */,
 				76A0049729A6BD4600BFA1A4 /* EnchantedLinkView.swift in Sources */,
 				76A0049229A6B23600BFA1A4 /* MagicLinkUpdateEmail.swift in Sources */,
 				76B7F5AD29A6742C0002754F /* TOTPView.swift in Sources */,
 				76EC1CAA29A684150039CEB3 /* TOTPLoggedInView.swift in Sources */,
 				76A0049929A6BDF100BFA1A4 /* EnchantedLinkSignUpView.swift in Sources */,
 				C00130A323D53FDF00CA3447 /* LoginScreenDemo.xcdatamodeld in Sources */,
+				0838B4D92A38CD4100257D4B /* SignUpPasswords.swift in Sources */,
 				76B7F59C29A57E860002754F /* OTPView.swift in Sources */,
 				76A004A129A6C83300BFA1A4 /* EnchantedLinkSignUpOrIn.swift in Sources */,
 				C00130A523D53FDF00CA3447 /* ContentView.swift in Sources */,
@@ -546,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -600,7 +628,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -786,20 +814,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		76B8D48029B12C4A00261634 /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
+		0838B4E02A38CF8A00257D4B /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/descope/swift-sdk";
 			requirement = {
-				kind = exactVersion;
-				version = 0.9.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		76B8D48129B12C4A00261634 /* DescopeKit */ = {
+		0838B4E12A38CF8B00257D4B /* DescopeKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 76B8D48029B12C4A00261634 /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			package = 0838B4E02A38CF8A00257D4B /* XCRemoteSwiftPackageReference "swift-sdk" */;
 			productName = DescopeKit;
 		};
 /* End XCSwiftPackageProductDependency section */
