@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/descope/swift-sdk",
       "state" : {
-        "revision" : "a85e40929e97712f8c1f4672e71d5cd6b6660fb5",
-        "version" : "0.9.1"
+        "revision" : "9d93da45214ec2178643eb4c019fb6408ff16551",
+        "version" : "0.9.0"
       }
     }
   ],
