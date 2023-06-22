@@ -15,15 +15,15 @@ var enchantedResponse: EnchantedLinkResponse?
 
 // OTP
 func otpSignUp (userEmail: String, loginId: String, userPhone: String, name: String, method: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
-    let myUser = User(name: name, phone: userPhone, email: userEmail)
+    let details = SignUpDetails(name: name, phone: userPhone, email: userEmail)
     Task {
         do {
-            print(myUser)
+            print(details)
             print("Login ID: " + loginId)
             if method == "email" {
-                try await Descope.otp.signUp(with: DeliveryMethod.email, loginId: loginId, user: myUser)
+                try await Descope.otp.signUp(with: DeliveryMethod.email, loginId: loginId, details: details)
             } else if method == "sms" {
-                try await Descope.otp.signUp(with: DeliveryMethod.sms, loginId: loginId, user: myUser)
+                try await Descope.otp.signUp(with: DeliveryMethod.sms, loginId: loginId, details: details)
             }
             print("Successfully initiated OTP Sign Up")
             completionHandler(true, nil)
@@ -73,10 +73,13 @@ func otpVerify (verifyCode: String, loginId: String, method: String, completionH
     Task {
         do {
             if method == "email" {
-                descopeSession = try await Descope.otp.verify(with: .email, loginId: loginId, code: verifyCode)
+                
+                let authResponse = try await Descope.otp.verify(with: .email, loginId: loginId, code: verifyCode)
+                descopeSession = DescopeSession(from: authResponse)
                 print(descopeSession as Any)
             } else if method == "sms" {
-                descopeSession = try await Descope.otp.verify(with: .sms, loginId: loginId, code: verifyCode)
+                let authResponse = try await Descope.otp.verify(with: .sms, loginId: loginId, code: verifyCode)
+                descopeSession = DescopeSession(from: authResponse)
                 print(descopeSession as Any)
             }
             print("Successfully verified OTP Code")
@@ -91,7 +94,7 @@ func otpVerify (verifyCode: String, loginId: String, method: String, completionH
 func otpUpdateEmail (loginId: String, email: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     Task {
         do {
-            try await Descope.otp.updateEmail(email, loginId: loginId, refreshJwt: descopeSession!.refreshJwt)
+            try await Descope.otp.updateEmail(email, loginId: loginId, refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
             print("Successfully started OTP Email Update")
             completionHandler(true, nil)
         } catch let descopeErr as DescopeError {
@@ -105,7 +108,7 @@ func otpUpdatePhone (loginId: String, phone: String, method: String, completionH
     Task {
         do {
             if method == "sms" {
-                try await Descope.otp.updatePhone(phone, with: .sms, loginId: loginId, refreshJwt: descopeSession!.refreshJwt)
+                try await Descope.otp.updatePhone(phone, with: .sms, loginId: loginId, refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
                 print("Successfully started OTP Phone Update")
             }
             // Later add whatsapp
@@ -119,14 +122,14 @@ func otpUpdatePhone (loginId: String, phone: String, method: String, completionH
 
 // TOTP
 func totpSignUp (userEmail: String, loginId: String, userPhone: String, name: String, completionHandler: @escaping (Bool, TOTPResponse?, DescopeError?) -> Void) async throws {
-    let myUser = User(name: name, phone: userPhone, email: userEmail)
+    let details = SignUpDetails(name: name, phone: userPhone, email: userEmail)
     Task {
         do {
-            let totpResponse = try await Descope.totp.signUp(loginId: loginId.lowercased(), user: myUser)
+            let totpResponse = try await Descope.totp.signUp(loginId: loginId.lowercased(), details: details)
             print("Successfully initiated TOTP SignUp")
             print("TOTP QR Code: Returned as a UIImage within totpResponse.image")
             print("TOTP Key: " + totpResponse.key)
-            print("TOTP Provisioning URL: " + totpResponse.provisioningURL)
+//            print("TOTP Provisioning URL: " + totpResponse.provisioningURL)
             print(totpResponse)
             completionHandler(true, totpResponse, nil)
         } catch let descopeErr as DescopeError {
@@ -155,7 +158,8 @@ func totpVerify (verifyCode: String, loginId: String, completionHandler: @escapi
         do {
             print("TOTP Code: " + verifyCode)
             print("Login ID: " + loginId)
-            descopeSession = try await Descope.totp.verify(loginId: loginId.lowercased(), code: verifyCode)
+            let authResponse = try await Descope.totp.verify(loginId: loginId.lowercased(), code: verifyCode)
+            descopeSession = DescopeSession(from: authResponse)
             print("Successfully verified TOTP Code")
             print(descopeSession as Any)
             completionHandler(true, nil)
@@ -169,12 +173,12 @@ func totpVerify (verifyCode: String, loginId: String, completionHandler: @escapi
 // Enchanted Link
 func enchantedSignUp (userEmail: String, loginId: String, userPhone: String, name: String, completionHandler: @escaping (Bool, EnchantedLinkResponse?, DescopeError?) -> Void) async throws {
     //let myUser = DescopeKit.User(name: "Desmond Copeland")
-    let myUser = User(name: name, phone: userPhone, email: userEmail)
+    let details = SignUpDetails(name: name, phone: userPhone, email: userEmail)
     print("I am here")
     // DescopeKit.User(name: "Desmond Copeland")
     Task {
         do {
-            enchantedResponse = try await Descope.enchantedLink.signUp(loginId: loginId, user: myUser, uri: "https://meauthy.co")
+            enchantedResponse = try await Descope.enchantedLink.signUp(loginId: loginId, details: details, uri: "https://meauthy.co")
             print("Successfully initiated Enchanted SignUp")
             print("Enchanted Link linkId: " + enchantedResponse!.linkId)
             print("Enchanted Link pendingRef: " + enchantedResponse!.pendingRef)
@@ -189,7 +193,8 @@ func enchantedSignUp (userEmail: String, loginId: String, userPhone: String, nam
 func enchantedPolling (completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     Task {
         do {
-            descopeSession = try await Descope.enchantedLink.pollForSession(pendingRef: enchantedResponse!.pendingRef, timeout: 180)
+            let authResponse = try await Descope.enchantedLink.pollForSession(pendingRef: enchantedResponse!.pendingRef, timeout: 180)
+            descopeSession = DescopeSession(from: authResponse)
             print("Successfully found session")
             print(descopeSession as Any)
             completionHandler(true, nil)
@@ -204,7 +209,7 @@ func enchantedPolling (completionHandler: @escaping (Bool, DescopeError?) -> Voi
 func enchantedLinkUpdateEmail (loginId: String, email: String, completionHandler: @escaping (Bool, EnchantedLinkResponse?, DescopeError?) -> Void) async throws {
     Task {
         do {
-            enchantedResponse = try await Descope.enchantedLink.updateEmail(email, loginId: loginId, uri: "https://meauthy.co", refreshJwt: descopeSession!.refreshJwt)
+            enchantedResponse = try await Descope.enchantedLink.updateEmail(email, loginId: loginId, uri: "https://meauthy.co", refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
             print("Successfully started Enchanted Link Email Update")
             print(enchantedResponse as Any)
             completionHandler(true, enchantedResponse, nil)
@@ -248,16 +253,16 @@ func enchantedLinkSignIn (loginId: String, completionHandler: @escaping (Bool, E
 // MagicLink
 func magicLinkSignUp (userEmail: String, loginId: String, userPhone: String, name: String, method: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     //let myUser = DescopeKit.User(name: "Desmond Copeland")
-    let myUser = User(name: name, phone: userPhone, email: userEmail)
+    let details = SignUpDetails(name: name, phone: userPhone, email: userEmail)
     // DescopeKit.User(name: "Desmond Copeland")
     Task {
         do {
-            print(myUser)
+            print(details)
             print("Login ID: " + loginId)
             if method == "email" {
-                try await Descope.magicLink.signUp(with: .email, loginId: loginId, user: myUser, uri: "https://meauthy.co")
+                try await Descope.magicLink.signUp(with: .email, loginId: loginId, details: details, uri: "https://meauthy.co")
             } else if method == "sms" {
-                try await Descope.magicLink.signUp(with: .sms, loginId: loginId, user: myUser, uri: "https://meauthy.co")
+                try await Descope.magicLink.signUp(with: .sms, loginId: loginId, details: details, uri: "https://meauthy.co")
             }
             print("Successfully initiated Magic Link SignUp")
             completionHandler(true, nil)
@@ -310,7 +315,8 @@ func magicLinkVerify (token: String, completionHandler: @escaping (Bool, Descope
     // DescopeKit.User(name: "Desmond Copeland")
     Task {
         do {
-            descopeSession = try await Descope.magicLink.verify(token: token)
+            let authResponse = try await Descope.magicLink.verify(token: token)
+            descopeSession = DescopeSession(from: authResponse)
             print("Successfully verified Magic Link Token")
             print(descopeSession as Any)
             completionHandler(true, nil)
@@ -324,7 +330,7 @@ func magicLinkVerify (token: String, completionHandler: @escaping (Bool, Descope
 func magicLinkUpdateEmail (loginId: String, email: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     Task {
         do {
-            try await Descope.magicLink.updateEmail(email, loginId: loginId, uri: "https://meauthy.co", refreshJwt: descopeSession!.refreshJwt)
+            try await Descope.magicLink.updateEmail(email, loginId: loginId, uri: "https://meauthy.co", refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
             print("Successfully started Magic Link Email Update")
             completionHandler(true, nil)
         } catch let descopeErr as DescopeError {
@@ -338,7 +344,7 @@ func magicLinkUpdatePhone (loginId: String, phone: String, method: String, compl
     Task {
         do {
             if method == "sms" {
-                try await Descope.magicLink.updatePhone(phone, with: .sms, loginId: loginId, uri: "https://meauthy.co", refreshJwt: descopeSession!.refreshJwt)
+                try await Descope.magicLink.updatePhone(phone, with: .sms, loginId: loginId, uri: "https://meauthy.co", refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
                 print("Successfully started Magic Link Email Update")
                 completionHandler(true, nil)
             }
@@ -384,7 +390,8 @@ class OAuthLoginSession: NSObject,
                     // Exchange code for session
                     Task {
                         do {
-                            descopeSession = try await Descope.oauth.exchange(code: code)
+                            let authResponse = try await Descope.oauth.exchange(code: code)
+                            descopeSession = DescopeSession(from: authResponse)
                             completionHandler(true, nil)
                         } catch let descopeErr as DescopeError {
                             print(descopeErr)
@@ -435,7 +442,9 @@ class SSOLoginSession: NSObject,
                     
                     Task.init {
                         do {
-                            descopeSession = try await Descope.sso.exchange(code: code)
+                            let authResponse = try await Descope.sso.exchange(code: code)
+                            descopeSession = DescopeSession(from: authResponse)
+
                             completionHandler(true, nil)
                         } catch let descopeErr as DescopeError {
                             print(descopeErr)
@@ -450,6 +459,98 @@ class SSOLoginSession: NSObject,
         } catch {
             print(error)
             completionHandler(false, nil)
+        }
+    }
+}
+
+
+
+// Passwords
+func passwordsSignUp (userPassword: String, userEmail: String, loginId: String, userPhone: String, name: String, method: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
+    let details = SignUpDetails(name: name, phone: userPhone, email: userEmail)
+    Task {
+        do {
+            print(details)
+            print("Login ID: " + loginId)
+            try await Descope.password.signUp(loginId: loginId, password: userPassword, details: details)
+
+            print("Successfully initiated Password Sign Up")
+            completionHandler(true, nil)
+        } catch let descopeErr as DescopeError {
+            print(descopeErr)
+            completionHandler(false, descopeErr)
+        }
+    }
+}
+
+func passwordsSignIn (userPassword: String, loginId: String, method: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
+    Task {
+        do {
+            try await Descope.password.signIn(loginId: loginId, password: userPassword)
+            print("Successfully initiated Password Sign In")
+            completionHandler(true, nil)
+        } catch let descopeErr as DescopeError {
+            print(descopeErr)
+            completionHandler(false, descopeErr)
+        }
+    }
+}
+
+func passwordsUpdate (newPassword: String, loginId: String, refreshJwt: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
+    Task {
+        do {
+            try await Descope.password.update(loginId: loginId, newPassword: newPassword, refreshJwt: refreshJwt)
+            print("Successfully initiated Password Update")
+            completionHandler(true, nil)
+        } catch let descopeErr as DescopeError {
+            print(descopeErr)
+            completionHandler(false, descopeErr)
+        }
+    }
+}
+
+func passwordsReplace (newPassword: String, loginId: String, oldPassword: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
+    Task {
+        do {
+            try await Descope.password.replace(loginId: loginId, oldPassword: oldPassword, newPassword: newPassword)
+            print("Successfully initiated Password Replace")
+            completionHandler(true, nil)
+        } catch let descopeErr as DescopeError {
+            print(descopeErr)
+            completionHandler(false, descopeErr)
+        }
+    }
+}
+
+func passwordsSendReset (loginId: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
+    Task {
+        do {
+            try await Descope.password.sendReset(loginId: loginId, redirectURL: nil)
+            print("Successfully initiated Password Send Reset")
+            completionHandler(true, nil)
+        } catch let descopeErr as DescopeError {
+            print(descopeErr)
+            completionHandler(false, descopeErr)
+        }
+    }
+}
+
+// Flows
+func startFlow (flowURL: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
+    Task {
+        do {
+            print("Starting flow")
+            
+            let runner = await DescopeFlowRunner(flowURL: flowURL)
+            let authResponse = try await Descope.flow.start(runner: runner)
+            let session = DescopeSession(from: authResponse)
+            Descope.sessionManager.manageSession(session)
+            
+            print("Successfully initiated Password Send Reset")
+            completionHandler(true, nil)
+        } catch let descopeErr as DescopeError {
+            print(descopeErr)
+            completionHandler(false, descopeErr)
         }
     }
 }

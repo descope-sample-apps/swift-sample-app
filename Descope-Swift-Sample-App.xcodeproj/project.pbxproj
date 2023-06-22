@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085416CD2A450A4400053549 /* DescopeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 085416CC2A450A4400053549 /* DescopeKit */; };
+		085416D12A450AD900053549 /* FlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085416D02A450AD900053549 /* FlowView.swift */; };
+		085416D32A450AEA00053549 /* FlowSignedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085416D22A450AEA00053549 /* FlowSignedIn.swift */; };
+		085416D52A450B0800053549 /* PassswordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085416D42A450B0800053549 /* PassswordsView.swift */; };
+		085416D72A450B1000053549 /* PasswordsLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085416D62A450B1000053549 /* PasswordsLoggedIn.swift */; };
+		085416D92A450B1A00053549 /* SignUpPasswords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085416D82A450B1A00053549 /* SignUpPasswords.swift */; };
+		085416DD2A450B2500053549 /* SignInPasswords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085416DC2A450B2500053549 /* SignInPasswords.swift */; };
 		760CFB1E299EB0420001703E /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760CFB1D299EB0420001703E /* LoggedInView.swift */; };
 		760CFB24299EBD8A0001703E /* DescopeWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760CFB23299EBD8A0001703E /* DescopeWrappers.swift */; };
 		76A0048629A6B1DD00BFA1A4 /* MagicLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0048529A6B1DD00BFA1A4 /* MagicLinkView.swift */; };
@@ -39,7 +46,6 @@
 		76B7F5AF29A674EF0002754F /* OTPLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7F5AE29A674EF0002754F /* OTPLoggedIn.swift */; };
 		76B7F5B129A675310002754F /* OTPUpdateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7F5B029A675310002754F /* OTPUpdateEmail.swift */; };
 		76B7F5B329A6753B0002754F /* OTPUpdatePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7F5B229A6753B0002754F /* OTPUpdatePhone.swift */; };
-		76B8D48229B12C4A00261634 /* DescopeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 76B8D48129B12C4A00261634 /* DescopeKit */; };
 		76EC1CAA29A684150039CEB3 /* TOTPLoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC1CA929A684150039CEB3 /* TOTPLoggedInView.swift */; };
 		C001309E23D53FDF00CA3447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C001309D23D53FDF00CA3447 /* AppDelegate.swift */; };
 		C00130A023D53FDF00CA3447 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C001309F23D53FDF00CA3447 /* SceneDelegate.swift */; };
@@ -68,6 +74,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		085416D02A450AD900053549 /* FlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowView.swift; sourceTree = "<group>"; };
+		085416D22A450AEA00053549 /* FlowSignedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowSignedIn.swift; sourceTree = "<group>"; };
+		085416D42A450B0800053549 /* PassswordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassswordsView.swift; sourceTree = "<group>"; };
+		085416D62A450B1000053549 /* PasswordsLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsLoggedIn.swift; sourceTree = "<group>"; };
+		085416D82A450B1A00053549 /* SignUpPasswords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswords.swift; sourceTree = "<group>"; };
+		085416DC2A450B2500053549 /* SignInPasswords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPasswords.swift; sourceTree = "<group>"; };
 		760CFB1D299EB0420001703E /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
 		760CFB23299EBD8A0001703E /* DescopeWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescopeWrappers.swift; sourceTree = "<group>"; };
 		76A0048529A6B1DD00BFA1A4 /* MagicLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicLinkView.swift; sourceTree = "<group>"; };
@@ -119,7 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76B8D48229B12C4A00261634 /* DescopeKit in Frameworks */,
+				085416CD2A450A4400053549 /* DescopeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +152,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		085416CE2A450AC900053549 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				085416D42A450B0800053549 /* PassswordsView.swift */,
+				085416D62A450B1000053549 /* PasswordsLoggedIn.swift */,
+				085416D82A450B1A00053549 /* SignUpPasswords.swift */,
+				085416DC2A450B2500053549 /* SignInPasswords.swift */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		085416CF2A450ACE00053549 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				085416D02A450AD900053549 /* FlowView.swift */,
+				085416D22A450AEA00053549 /* FlowSignedIn.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
 		760CFB16299E77B50001703E /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +282,8 @@
 		C001309C23D53FDF00CA3447 /* DescopeSwiftSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				085416CF2A450ACE00053549 /* Flow */,
+				085416CE2A450AC900053549 /* Password */,
 				C001309D23D53FDF00CA3447 /* AppDelegate.swift */,
 				C001309F23D53FDF00CA3447 /* SceneDelegate.swift */,
 				C00130A423D53FDF00CA3447 /* ContentView.swift */,
@@ -295,7 +329,7 @@
 			);
 			name = "Descope-Swift-Sample-App";
 			packageProductDependencies = (
-				76B8D48129B12C4A00261634 /* DescopeKit */,
+				085416CC2A450A4400053549 /* DescopeKit */,
 			);
 			productName = LoginScreenDemo;
 			productReference = C001309A23D53FDF00CA3447 /* Descope-Swift-Sample-App.app */;
@@ -370,7 +404,7 @@
 			);
 			mainGroup = C001309123D53FDF00CA3447;
 			packageReferences = (
-				76B8D48029B12C4A00261634 /* XCRemoteSwiftPackageReference "swift-sdk" */,
+				085416CB2A450A4400053549 /* XCRemoteSwiftPackageReference "swift-sdk" */,
 			);
 			productRefGroup = C001309B23D53FDF00CA3447 /* Products */;
 			projectDirPath = "";
@@ -419,12 +453,15 @@
 				76A004CC29A9455200BFA1A4 /* VerifyMagicLinkView.swift in Sources */,
 				760CFB1E299EB0420001703E /* LoggedInView.swift in Sources */,
 				76A0048C29A6B20300BFA1A4 /* SignUpMagicLink.swift in Sources */,
+				085416D72A450B1000053549 /* PasswordsLoggedIn.swift in Sources */,
 				76B7F59E29A580530002754F /* SignUpOTP.swift in Sources */,
 				76B7F5B129A675310002754F /* OTPUpdateEmail.swift in Sources */,
 				76B7F5A029A580EE0002754F /* VerifyOTPView.swift in Sources */,
 				76B7F5A429A582CE0002754F /* SignUpOrInOTP.swift in Sources */,
 				76A004C829A9116700BFA1A4 /* TOTPDisplayView.swift in Sources */,
 				76B7F5A229A581EA0002754F /* SignInOTP.swift in Sources */,
+				085416D32A450AEA00053549 /* FlowSignedIn.swift in Sources */,
+				085416D52A450B0800053549 /* PassswordsView.swift in Sources */,
 				76B7F5A729A66BF40002754F /* TOTPSignUpView.swift in Sources */,
 				76A0049029A6B22B00BFA1A4 /* MagicLinkLoggedIn.swift in Sources */,
 				76B7F5AF29A674EF0002754F /* OTPLoggedIn.swift in Sources */,
@@ -434,6 +471,7 @@
 				76B7F591299FFEE50002754F /* OAuthView.swift in Sources */,
 				76B7F5B329A6753B0002754F /* OTPUpdatePhone.swift in Sources */,
 				76A0048E29A6B21900BFA1A4 /* SignUpOrInMagicLink.swift in Sources */,
+				085416D92A450B1A00053549 /* SignUpPasswords.swift in Sources */,
 				76A0049F29A6C82800BFA1A4 /* EnchantedLinkSignIn.swift in Sources */,
 				76A0048629A6B1DD00BFA1A4 /* MagicLinkView.swift in Sources */,
 				76A0049729A6BD4600BFA1A4 /* EnchantedLinkView.swift in Sources */,
@@ -445,12 +483,14 @@
 				76B7F59C29A57E860002754F /* OTPView.swift in Sources */,
 				76A004A129A6C83300BFA1A4 /* EnchantedLinkSignUpOrIn.swift in Sources */,
 				C00130A523D53FDF00CA3447 /* ContentView.swift in Sources */,
+				085416D12A450AD900053549 /* FlowView.swift in Sources */,
 				76B7F5AB29A66C120002754F /* TOTPVerifyView.swift in Sources */,
 				76A004A329A6C83E00BFA1A4 /* EnchantedLinkUpdateEmail.swift in Sources */,
 				C00130A023D53FDF00CA3447 /* SceneDelegate.swift in Sources */,
 				76B7F5A929A66C000002754F /* TOTPSignInView.swift in Sources */,
 				76A0049D29A6C81B00BFA1A4 /* EnchantedLinkLoggedIn.swift in Sources */,
 				76A004CA29A92EDD00BFA1A4 /* EnchantedLinkDisplayView.swift in Sources */,
+				085416DD2A450B2500053549 /* SignInPasswords.swift in Sources */,
 				76A0048A29A6B1F700BFA1A4 /* SignInMagicLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +661,7 @@
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DescopeSwiftSampleApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Descope Swift Sample App";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -631,7 +672,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				myBaseURL = "https://api.descope.com";
-				myProjectId = "<Your-Project-ID>";
+				myProjectId = "<your_project_id>";
 			};
 			name = Debug;
 		};
@@ -646,6 +687,7 @@
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DescopeSwiftSampleApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Descope Swift Sample App";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -656,7 +698,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				myBaseURL = "https://api.descope.com";
-				myProjectId = "<Your-Project-ID>";
+				myProjectId = "<your_project_id>";
 			};
 			name = Release;
 		};
@@ -786,20 +828,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		76B8D48029B12C4A00261634 /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
+		085416CB2A450A4400053549 /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/descope/swift-sdk";
 			requirement = {
-				kind = exactVersion;
-				version = 0.9.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		76B8D48129B12C4A00261634 /* DescopeKit */ = {
+		085416CC2A450A4400053549 /* DescopeKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 76B8D48029B12C4A00261634 /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			package = 085416CB2A450A4400053549 /* XCRemoteSwiftPackageReference "swift-sdk" */;
 			productName = DescopeKit;
 		};
 /* End XCSwiftPackageProductDependency section */
