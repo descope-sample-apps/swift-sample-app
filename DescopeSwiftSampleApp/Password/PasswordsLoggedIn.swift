@@ -27,7 +27,7 @@ struct PasswordsLoggedIn: View {
 //                        }.background(Color.black)
 //                            .foregroundColor(Color.white)
 //                            .cornerRadius(10)
-//                        
+//
 //                        NavigationLink(destination: OTPUpdatePhone(loginId:loginId).navigationBarBackButtonHidden(true)) {
 //                            Text("Update Phone via OTP")
 //                                .padding()
