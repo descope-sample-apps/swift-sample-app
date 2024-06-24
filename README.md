@@ -8,7 +8,7 @@ This sample app allows you to get familiar with the Descope Swift SDK. It has al
 ###  Run the app
 1. Clone this repo
 2. Open the project within Xcode
-3. Within the project settings of the project, change the `myProjectId` (If located outside the US, replace `myBaseURL` with localized base URL)
+3. Within the project settings of the project, change the `myProjectId` (If in a non-US region, or using a custom domain with CNAME, replace `myBaseURL` with your specific localized base URL)
 
 ![Alt text](Images/setProjectId.png?raw=true "Set Project ID")
 
