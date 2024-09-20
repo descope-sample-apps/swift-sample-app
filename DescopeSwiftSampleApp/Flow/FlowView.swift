@@ -13,7 +13,13 @@ struct FlowView: View {
     @State var showAlert: Bool = false
     @State var resultError: DescopeError?
     @State var loginId: String = "";
-    var flowURL = "<your_flow_url>";
+
+    let localProjectId = Bundle.main.infoDictionary!["myProjectId"] as! String
+
+    var flowURL: String {
+        return "https://auth.descope.io/\(localProjectId)?flow=sign-up-or-in"
+    }
+
     let verticalPaddingForForm = 20.0
     var body: some View {
         NavigationView {
