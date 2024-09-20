@@ -178,7 +178,7 @@ func enchantedSignUp (userEmail: String, loginId: String, userPhone: String, nam
     // DescopeKit.User(name: "Desmond Copeland")
     Task {
         do {
-            enchantedResponse = try await Descope.enchantedLink.signUp(loginId: loginId, details: details, redirectURL: "https://meauthy.co")
+            enchantedResponse = try await Descope.enchantedLink.signUp(loginId: loginId, details: details, redirectURL: "https://example.com")
             print("Successfully initiated Enchanted SignUp")
             print("Enchanted Link linkId: " + enchantedResponse!.linkId)
             print("Enchanted Link pendingRef: " + enchantedResponse!.pendingRef)
@@ -209,7 +209,7 @@ func enchantedPolling (completionHandler: @escaping (Bool, DescopeError?) -> Voi
 func enchantedLinkUpdateEmail (loginId: String, email: String, completionHandler: @escaping (Bool, EnchantedLinkResponse?, DescopeError?) -> Void) async throws {
     Task {
         do {
-            enchantedResponse = try await Descope.enchantedLink.updateEmail(email, loginId: loginId, redirectURL: "https://meauthy.co", refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
+            enchantedResponse = try await Descope.enchantedLink.updateEmail(email, loginId: loginId, redirectURL: "https://example.com", refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
             print("Successfully started Enchanted Link Email Update")
             print(enchantedResponse as Any)
             completionHandler(true, enchantedResponse, nil)
@@ -224,7 +224,7 @@ func enchantedLinkSignUpOrIn (loginId: String, completionHandler: @escaping (Boo
     
     Task {
         do {
-            enchantedResponse = try await Descope.enchantedLink.signUpOrIn(loginId: loginId, redirectURL: "https://meauthy.co")
+            enchantedResponse = try await Descope.enchantedLink.signUpOrIn(loginId: loginId, redirectURL: "https://example.com")
             print("Successfully initiated Enchanted Link Sign Up Or In")
             print(enchantedResponse as Any)
             completionHandler(true, enchantedResponse, nil)
@@ -239,7 +239,7 @@ func enchantedLinkSignIn (loginId: String, completionHandler: @escaping (Bool, E
     // DescopeKit.User(name: "Desmond Copeland")
     Task {
         do {
-            enchantedResponse = try await Descope.enchantedLink.signIn(loginId: loginId, redirectURL: "https://meauthy.co")
+            enchantedResponse = try await Descope.enchantedLink.signIn(loginId: loginId, redirectURL: "https://example.com")
             print("Successfully initiated Enchanted Link SignIn")
             print(enchantedResponse as Any)
             completionHandler(true, enchantedResponse, nil)
@@ -260,9 +260,9 @@ func magicLinkSignUp (userEmail: String, loginId: String, userPhone: String, nam
             print(details)
             print("Login ID: " + loginId)
             if method == "email" {
-                try await Descope.magicLink.signUp(with: .email, loginId: loginId, details: details, redirectURL: "https://meauthy.co")
+                try await Descope.magicLink.signUp(with: .email, loginId: loginId, details: details, redirectURL: "https://example.com")
             } else if method == "sms" {
-                try await Descope.magicLink.signUp(with: .sms, loginId: loginId, details: details, redirectURL: "https://meauthy.co")
+                try await Descope.magicLink.signUp(with: .sms, loginId: loginId, details: details, redirectURL: "https://example.com")
             }
             print("Successfully initiated Magic Link SignUp")
             completionHandler(true, nil)
@@ -278,9 +278,9 @@ func magicLinkSignUpOrIn (loginId: String, method: String, completionHandler: @e
     Task {
         do {
             if method == "email" {
-                try await Descope.magicLink.signUpOrIn(with: .email, loginId: loginId, redirectURL: "https://meauthy.co")
+                try await Descope.magicLink.signUpOrIn(with: .email, loginId: loginId, redirectURL: "https://example.com")
             } else if method == "sms" {
-                try await Descope.magicLink.signUpOrIn(with: .sms, loginId: loginId, redirectURL: "https://meauthy.co")
+                try await Descope.magicLink.signUpOrIn(with: .sms, loginId: loginId, redirectURL: "https://example.com")
             }
             print("Successfully initiated Magic Link SignUp")
             completionHandler(true, nil)
@@ -298,9 +298,9 @@ func magicLinkSignIn (loginId: String, method: String, completionHandler: @escap
     Task {
         do {
             if method == "email" {
-                try await Descope.magicLink.signIn(with: .email, loginId: loginId, redirectURL: "https://meauthy.co")
+                try await Descope.magicLink.signIn(with: .email, loginId: loginId, redirectURL: "https://example.com")
             } else if method == "sms" {
-                try await Descope.magicLink.signIn(with: .sms, loginId: loginId, redirectURL: "https://meauthy.co")
+                try await Descope.magicLink.signIn(with: .sms, loginId: loginId, redirectURL: "https://example.com")
             }
             print("Successfully initiated Magic Link Sign In")
             completionHandler(true, nil)
@@ -330,7 +330,7 @@ func magicLinkVerify (token: String, completionHandler: @escaping (Bool, Descope
 func magicLinkUpdateEmail (loginId: String, email: String, completionHandler: @escaping (Bool, DescopeError?) -> Void) async throws {
     Task {
         do {
-            try await Descope.magicLink.updateEmail(email, loginId: loginId, redirectURL: "https://meauthy.co", refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
+            try await Descope.magicLink.updateEmail(email, loginId: loginId, redirectURL: "https://example.com", refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
             print("Successfully started Magic Link Email Update")
             completionHandler(true, nil)
         } catch let descopeErr as DescopeError {
@@ -344,7 +344,7 @@ func magicLinkUpdatePhone (loginId: String, phone: String, method: String, compl
     Task {
         do {
             if method == "sms" {
-                try await Descope.magicLink.updatePhone(phone, with: .sms, loginId: loginId, redirectURL: "https://meauthy.co", refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
+                try await Descope.magicLink.updatePhone(phone, with: .sms, loginId: loginId, redirectURL: "https://example.com", refreshJwt: descopeSession!.refreshJwt, options: UpdateOptions(rawValue: 1))
                 print("Successfully started Magic Link Email Update")
                 completionHandler(true, nil)
             }
