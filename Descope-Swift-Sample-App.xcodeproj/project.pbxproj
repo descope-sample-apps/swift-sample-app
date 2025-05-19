@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -657,7 +657,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DescopeSwiftSampleApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 252D34W557;
+				DEVELOPMENT_TEAM = 6DHGP65953;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DescopeSwiftSampleApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Descope Swift Sample App";
@@ -683,7 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DescopeSwiftSampleApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 252D34W557;
+				DEVELOPMENT_TEAM = 6DHGP65953;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DescopeSwiftSampleApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Descope Swift Sample App";
@@ -708,7 +708,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NZ6W8SMQS8;
+				DEVELOPMENT_TEAM = 6DHGP65953;
 				INFOPLIST_FILE = LoginScreenDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -730,7 +730,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NZ6W8SMQS8;
+				DEVELOPMENT_TEAM = 6DHGP65953;
 				INFOPLIST_FILE = LoginScreenDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -751,7 +751,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NZ6W8SMQS8;
+				DEVELOPMENT_TEAM = 6DHGP65953;
 				INFOPLIST_FILE = LoginScreenDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -771,7 +771,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NZ6W8SMQS8;
+				DEVELOPMENT_TEAM = 6DHGP65953;
 				INFOPLIST_FILE = LoginScreenDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
